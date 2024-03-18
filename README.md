@@ -2,6 +2,8 @@
 
 ## Titulo del proyecto: Encriptador 
 
+![Encriptador](https://i.ibb.co/bFcg67K/captura.jpg)
+
 ### Índice:
 * Descripción del Proyecto
 * Estado del proyecto
@@ -32,7 +34,7 @@ gaitober" => "gato"
 Concluido.
 
 #### Acceso al Proyecto
-[Link a la página](https://soyjuano.github.io/Encriptador/)
+[Link al encriptador](https://soyjuano.github.io/Encriptador/)
 
 #### Tecnologías utilizadas
 * HTML
