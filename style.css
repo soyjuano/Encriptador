@@ -1,0 +1,322 @@
+* {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.roboto-light {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+
+body {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.fondo {
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+}
+
+header {
+    width: 100vw;
+    height: 15%;
+}
+
+main {
+    height: 70%;
+}
+
+.logo {
+    height: 60%;
+}
+
+.fondo-encabezado{
+    background-color: rgba(192, 208, 255, 0.1);
+    width: 100%;
+    height: 100%;
+}
+
+.encabezado {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 5fr 1fr;
+    align-items: center;
+    justify-items: center;
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+h1 {
+    font-weight: bold;
+    color: white;
+}
+
+.boton {
+    background-color: #615fff; 
+    color: white; 
+    padding: 10px; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.boton:hover {
+    background-color: #4643ff ; 
+}
+
+.titulomensaje,
+.tituloresultado {
+    display: flex;
+    color: #FFFFFF;
+    font-weight: bold;
+    align-items: center;
+}
+
+.ingreso {
+    grid-area: ingreso;
+}
+
+.resultado {
+    grid-area: resultado;
+}
+
+.titulomensaje {
+    grid-area: titulomensaje;
+}
+
+.tituloresultado {
+    grid-area: tituloresultado;
+}
+
+.contenedor {
+    height: 100%;
+    display: grid;
+    justify-items: center;
+    grid-template-rows: 1fr 3fr 1fr;
+    grid-template-columns: 2fr 1fr 2fr;
+    gap: 5px;
+    padding: 2em;
+    grid-template-areas:
+        "titulomensaje . tituloresultado "
+        "ingreso botones resultado"
+        "seccionbandera seccionbandera seccionbandera"
+
+}
+
+.botones {
+    grid-area: botones;
+    gap: 20px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ingreso,
+.resultado {
+    resize: none;
+    width: 60%;
+    height: 100%;
+    font-size: 18px;
+    font-weight: bold;
+    box-sizing: border-box;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    padding: 4%;
+}
+
+.ingreso:hover,
+.resultado:hover {
+    border: 2px solid gray;
+}
+
+.encriptar,
+.desencriptar,
+.copiar,
+.pegar {
+    width: 100%;
+    padding: 4% 0;
+    font-size: 18px;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    transition: 1s all;
+    cursor: pointer;
+    box-shadow: 1px 1px 10px 5px black;
+}
+
+.encriptar,
+.desencriptar {
+    background: gray;
+}
+
+.copiar,
+.pegar {
+    background: gray;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.copiar {
+    margin-top: 20%;
+}
+
+.encriptar:hover,
+.desencriptar:hover,
+.copiar:hover,
+.pegar:hover {
+    background: rgb(90, 91, 92);
+    transform: scale(1.1);
+}
+
+.seccionbandera {
+    grid-area: seccionbandera;
+    height: fit-content;
+    font-size: 15px;
+    text-align: center;
+    color: red;
+    text-shadow: 1px 1px 2px black;
+    padding-top: 20px;
+}
+
+footer {
+    width: 100%;
+    height: 15%;
+    background-color: rgba(192, 208, 255, 0.03);
+     color: #FFFFFF;
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logofooter {
+    height: 50%;
+    padding: 10px;
+}
+
+@media screen and (max-width: 483px) {
+  
+    h1 {
+        font-size: 20px;
+        text-shadow: 1px 1px 1px rgb(0, 0, 0);
+    }
+
+    .titulomensaje,
+    .tituloresultado {
+        font-size: 20px;
+    }
+
+    .contenedor {
+        gap: 0;
+        padding: 1%;
+        grid-template-rows: 6% 8% 30% 22% 8% 30%;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "titulomensaje"
+            "seccionbandera"
+            "ingreso"
+            "botones"
+            "tituloresultado"
+            "resultado"
+    }
+
+    .seccionbandera {
+        font-size: 12px;
+        padding-top: 0px;
+    }
+
+    .botones {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "encriptar desencriptar"
+            "copiar pegar";
+
+        justify-content: center;
+    }
+
+    .copiar {
+        margin-top: 0;
+    }
+
+    .ingreso,
+    .resultado {
+        resize: none;
+        width: 80%;
+        height: 80%;
+        font-size: 15px;
+        font-weight: bold;
+        box-sizing: border-box;
+        border: 2px solid #000000;
+        border-radius: 10px;
+
+    }
+
+    .logofooter {
+        height: 60%;
+        padding: 10px;
+    }
+
+}
+
+@media screen and (max-width: 775px) {
+    .logo {
+        height: 60%
+    }
+
+    .encabezado{
+    display: block;
+    justify-items: center;
+    text-align: center;
+    padding: 20px 0px;
+    }
+
+    h1 {
+        font-size: 20px;
+        text-shadow: 1px 1px 1px rgb(0, 0, 0);
+    }
+
+@media screen and (min-device-width: 480px) and (max-width: 1021px) {
+    .titulomensaje,
+    .tituloresultado {
+        font-size: 30px;
+    }
+
+    .botones {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .ingreso,
+    .resultado {
+        resize: none;
+        width: 100%;
+        height: 100%;
+        padding-left: 1%;
+        padding-top: 1%;
+    }
+
+    .encriptar,
+    .desencriptar,
+    .copiar,
+    .pegar {
+        width: 100%;
+        padding: 4% 0;
+        font-size: 18px;
+
+    }
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Encriptador de Texto</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <img class="fondo" src="img/fondo.png" alt="imagen-de-fondo">
+
+    <header>
+        <div class="fondo-encabezado">
+            <div class="encabezado">
+                <img class="logo" src="img/alura-logo.svg" alt="alura-logo">
+                <h1>Encriptador Challenge ONE</h1>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="contenedor">
+
+            <h2 class="titulomensaje">Frase</h2>
+            <textarea class="ingreso" id="ingreso" placeholder="Ingrese el texto aqui"></textarea>
+
+            <div class="seccionbandera">
+                <p class="advertencia">&#128681; En minusculas, sin acentos ni caracteres especiales</p>
+            </div>
+
+            <div class="botones">
+                <input class="encriptar" id="encriptar" type="submit" onclick="encriptar();" value="Encriptar">
+                <input class="desencriptar" id="desencriptar" type="submit" onclick="desencriptar()"
+                    value="Desencriptar">
+                <input class="copiar" type="submit" onclick="copiar();" value="Copiar">
+                <input class="pegar" type="submit" onclick="pegar();" value="Pegar">
+            </div>
+            <h2 class="tituloresultado">Resultado</h2>
+            <textarea class="resultado" id="resultado" readonly></textarea>
+
+        </section>
+    </main>
+    <footer>
+        <img class="logofooter" src="img/logofooter.png" alt="logo alura">
+        <p>Desarrollado por Juan Pordenon</p>
+        <p>2024</p>
+    </footer>
+    <script src="app.js"></script>
+</body>
+
+</html>
